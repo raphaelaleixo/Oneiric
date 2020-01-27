@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import MoonLoading from '@/components/MoonLoading.vue';
+import MoonLoading from '@/components/_global/MoonLoading.vue';
 
 export default {
   components: { MoonLoading },

@@ -5,6 +5,9 @@
       :round="round"
       :defs="defs"
       :class="{'show-cards':round.step>=2}" />
+    <cards-played :game="game"
+      :round="round"
+      :defs="defs" />
     <ranking :game="game"
       :round="round"
       :defs="defs" />
@@ -12,11 +15,12 @@
 </template>
 
 <script>
-import TurnIndicator from '@/components/TurnIndicator/index.vue';
+import CardsPlayed from '@/components/CardsPlayed/index.vue';
 import Ranking from '@/components/Ranking/index.vue';
+import TurnIndicator from '@/components/TurnIndicator/index.vue';
 
 export default {
-  components: { TurnIndicator, Ranking },
+  components: { CardsPlayed, Ranking, TurnIndicator },
   computed: {
     game() {
       return this.$store.state.game;

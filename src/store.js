@@ -16,7 +16,7 @@ export default new Vuex.Store({
     round: {
       step: 0,
       clue: 'Inspiration',
-      cards: [],
+      cards: [3, 15, 33],
       votes: [2, null],
     },
     defs: {
