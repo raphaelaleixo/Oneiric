@@ -1,29 +1,42 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div id="oneiric"
+    class="grid">
+    <header>
+      <router-link to="/">
+        <img src="~@/assets/logo.svg" />
+      </router-link>
+    </header>
+    <router-view />
   </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+  html {
+    background: url(~@/assets/bg.png) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+    line-height: 1;
+    *,
+    *::after,
+    *::before {
+      box-sizing: inherit;
     }
   }
-}
+  .grid {
+    padding: 60px 90px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    height: 2em;
+    margin-top: 1em;
+  }
 </style>
